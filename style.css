@@ -1,0 +1,248 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (form inputs): 24px
+
+### Font
+
+font-family: 'Space Mono', monospace;
+
+- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+- Weights: 700 */
+
+:root{
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --font-input: 1.5rem;
+    --font-size: 0.7rem;
+    --font-size1: 1rem;
+    --font-size2: 1.2rem;
+    --font-size3: 1.4rem;
+    --font-size4: 2.2rem;
+    --font-fam: 'Space Mono', monospace;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    background-color: var(--grayish-cyan);
+}
+
+main{
+    font-family: var(--font-fam);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    gap: 4rem;
+}
+
+.bill-h1, .tip, .number-h2{
+    font-size: var(--font-size1);
+    margin: 0.5rem 0;
+    color: var(--dark-grayish-cyan);
+}
+
+input{
+    width: 100%;
+    padding: 0.4rem;
+}
+
+input[type=text]{
+    color: var(--very-dark-cyan);
+}
+
+#bill{
+    background: url(/img/icon-dollar.svg) no-repeat left;
+    background-position-x: 1rem;
+    /* outline: var(--strong-cyan); */
+}
+
+#bill, #num{
+    border: none;
+    background-color: var(--very-light-grayish-cyan);
+    text-align: right;
+    font-size: var(--font-input);
+    border-radius: 5px;
+}
+
+.tip{
+    margin: 2rem 0 1.2rem 0;
+}
+
+.grid-tip{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 1rem;
+}
+
+.grid-tip button{
+    background-color: var(--very-dark-cyan);
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem;
+    color: var(--white);
+    cursor: pointer;
+    font-size: var(--font-size2);
+}
+
+#num{
+    background: url(/img/icon-person.svg) no-repeat left;
+    background-color: var(--very-light-grayish-cyan);
+    background-position-x: 1rem;
+}
+
+button:hover{
+    border: none;
+    background-color: var(--strong-cyan);
+    color: var( --very-dark-cyan);
+    transition: 200ms ease;
+}
+
+#custom{
+    background-color: var(--very-light-grayish-cyan);
+    border: none;
+    border-radius: 5px;
+    font-size: var(--font-size2);
+    text-align: center;
+}
+
+.number-people{
+    margin-top: 2rem;
+}
+
+#error{
+    position: absolute;
+    color: rgba(255, 0, 0, 0.712);
+    margin-top: -1.6rem;
+    margin-left: 14.7rem;
+    font-size: var(--font-size);
+    display: none;
+}
+
+/* RIGHT CONTENT */
+
+.right-content{
+    height: 100%;
+    border-radius: 20px;
+    background-color: var(--very-dark-cyan);
+}
+
+.right-content input{
+    background-color: var(--very-dark-cyan);
+    border: none;
+
+}
+
+.right-container{
+    padding: 1rem 2rem;
+    max-width: 400px;
+}
+
+.tip-container{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.tip-wrapper, .total-wrapper{
+    width: 100%;
+}
+
+.total-header, .tip-header{
+    color: var(--white);
+    font-size: var(--font-size1);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#tip-amount::placeholder, #total::placeholder{
+    text-align: right;
+    color: var(--strong-cyan);
+    font-size: var(--font-size4);
+    opacity: 100%;
+}
+
+#tip-amount[type=text], #total[type=text]{
+    color: var(--strong-cyan);
+    display: inline-block;
+    font-size: var(--font-size4);
+    text-align: right;
+}
+
+.tip-span, .total-span{
+    font-size: 0.9rem;
+    color: var(--grayish-cyan);
+}
+
+.total-container{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.reset-container{
+    display: flex;
+    justify-content: center;
+    margin: 8.5rem 1.5rem 2rem 1.5rem;
+}
+
+#reset-button{
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    padding: 0.7rem 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    width: 100%;
+    opacity: 50%;
+}
+
+#reset-button:hover{
+    border: transparent;
+    opacity: 100%;
+}

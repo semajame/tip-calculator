@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <main>
+        <div class="logo">
+            <img src="/img/logo.svg" alt="logo">
+        </div>
+        <div class="container">
+
+            <section>
+                <div class="left-content">
+                    <h1 class="bill-h1">Bill</h1>
+
+                    <input type="text" id="bill" placeholder="0">
+                    
+                    <div class="number-people">
+                        <h2 class="number-h2">Number of People</h2>
+
+                        <p id="error">
+                            Can't be zero
+                        </p>
+
+                        <input type="text" id="num" placeholder="0" class="num">
+                    </div>
+
+                    <h2 class="tip">Select Tip %</h2>
+                    <div class="grid-tip">
+                        <button value="5%" id="five">5%</button>
+                        <button value="10%" id="ten">10%</button>
+                        <button value="15%" id="fifteen">15%</button>
+                        <button value="25%" id="twenty-five">25%</button>
+                        <button value="50%" id="fifty">50%</button>
+                        <input type="text" id="custom" placeholder="Custom">
+                    </div>
+
+                </div>
+            </section>
+
+        <!-- RIGHT CONTENT -->
+
+            <section>
+                <div class="right-content">
+                    <div class="right-container">
+                        <div class="tip-container">
+                            <div class="tip-wrapper">
+                                <h2 class="tip-header">Tip Amount</h2>
+                                <span class="tip-span">/ person</span>
+                            </div>
+
+                            <input type="text" placeholder="$0.00" readonly="" id="tip-amount">
+                        </div>
+
+                        <div class="total-container">
+                            <div class="total-wrapper">
+                                <h2 class="total-header">Total</h2>
+                                <span class="total-span">/ person</span>
+                            </div>
+
+                            <input type="text" placeholder="$0.00" readonly="" id="total">
+                        </div>
+                    </div>
+
+                    <div class="reset-container">
+                        <button class="reset" id="reset-button">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+<script src="/script.js"></script>
+
+</html>
